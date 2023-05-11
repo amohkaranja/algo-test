@@ -26,3 +26,13 @@ function removeDuplicates(nums) {
     }
     return nextUniqueIndex+1
 }
+// same as the above but simpler way using splice method
+const removeDuplicates = function (nums) {
+    for(let i=0;i<nums.length;){
+        if(nums[i] ===nums[i+1]){
+            nums.splice(i,1)
+        }else{
+            i++
+        }
+    }
+   };
